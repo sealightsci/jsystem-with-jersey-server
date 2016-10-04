@@ -74,11 +74,6 @@ public class FileOperations extends SystemTestCase4 {
 
     }
 
-    private void runAgent(String baseFolder, String jarName, String mainClass) {
-
-
-    }
-
     public StartedProcess runAgent(String workingDirectory, String agentPath, String targetJar, String mainClass) {
 
         ProcessExecutor processExecutor = createProcessExecuter(workingDirectory);
@@ -150,7 +145,7 @@ public class FileOperations extends SystemTestCase4 {
 
 
     private String getAgentJarPath() {
-        String agentPath = System.getProperty("test-listener");
+        String agentPath = System.getProperty("agentPath");
         if (agentPath != null && agentPath.length() > 0)
             return agentPath;
         return "C:\\Work\\Projects\\SL.OnPremise.Agents.Java\\java-agent-bootstrapper\\target\\java-agent-bootstrapper-1.0.0-SNAPSHOT-jar-with-dependencies.jar";
